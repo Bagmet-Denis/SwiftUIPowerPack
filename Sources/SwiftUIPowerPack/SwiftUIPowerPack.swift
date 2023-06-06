@@ -1,8 +1,9 @@
 import SwiftUI
 
 public struct HapticButton<Content: View>: View{
-    let action: () -> Void
-    let content: () -> Content
+    public let action: () -> Void
+    public let content: () -> Content
+    
     public var body: some View{
         Button(action: {
             Haptics.shared.play(.soft)
